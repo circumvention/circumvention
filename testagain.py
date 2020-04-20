@@ -1,14 +1,13 @@
-# -*- coding: utf-8 -*-
-
-# Sample Python code for youtube.videos.update
-# See instructions for running these code samples locally:
-# https://developers.google.com/explorer-help/guides/code_samples#python
-
-import os
-
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
+import urllib.request
+import json 
+import gdata.youtube
+import gdata.youtube.service
+import os
+
+
 
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
@@ -19,7 +18,7 @@ def main():
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "YOUR_CLIENT_SECRET_FILE.json"
+    client_secrets_file = "YOUR_CLIENT.json"
 
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
