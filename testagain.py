@@ -4,6 +4,7 @@ import googleapiclient.errors
 import urllib.request
 import json 
 import gdata
+import atom
 import os
 
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
