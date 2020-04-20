@@ -40,7 +40,3 @@ request = youtube.videos().update(
     )
 response = request.execute()
 print(response)
-
-print(response)
-VideoData()
-titleData()
