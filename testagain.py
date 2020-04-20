@@ -3,11 +3,8 @@ import googleapiclient.discovery
 import googleapiclient.errors
 import urllib.request
 import json 
-import gdata.youtube
-import gdata.youtube.service
+import gdata
 import os
-
-
 
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
