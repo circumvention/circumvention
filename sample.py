@@ -29,8 +29,7 @@ def main():
     data = urllib.request.urlopen(url).read()
     viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
 
-while True:  
-    time.sleep(1)
+    
     request = youtube.videos().update(
         part="snippet",
         body={
