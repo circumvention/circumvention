@@ -39,5 +39,4 @@ print(video)
  #         }
  #       }
  #   )
-response = request.execute()
-print(response)
+
