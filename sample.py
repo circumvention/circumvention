@@ -31,7 +31,7 @@ def main():
     request = youtube.videos().update(
         part="snippet",
         body={
-          "id": "",
+          "id": "gnPPgX1p5lc",
           "snippet": {
             "title": "Test again lul",
             "categoryId": "23"
