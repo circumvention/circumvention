@@ -27,6 +27,8 @@ print(viewCount)
 
 video = api.get_video_by_id(video_id="gnPPgX1p5lc")
 
+print(video.items)
+
 print(video)
 
 #request = youtube.videos().update(
