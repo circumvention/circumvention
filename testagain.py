@@ -25,15 +25,19 @@ viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
 print(viewCount)
 
 
-request = youtube.videos().update(
-        part="id,snippet",
-        body={
-          "id": "gnPPgX1p5lc",
-          "snippet": {
-            "title": "test1",
-            "categoryId": "23"
-          }
-        }
-    )
+video = api.get_video_by_id(video_id="gnPPgX1p5lc")
+
+print(video)
+
+#request = youtube.videos().update(
+ #       part="id,snippet",
+ #       body={
+ #         "id": "gnPPgX1p5lc",
+ #         "snippet": {
+ #           "title": "test1",
+ #           "categoryId": "23"
+ #         }
+ #       }
+ #   )
 response = request.execute()
 print(response)
