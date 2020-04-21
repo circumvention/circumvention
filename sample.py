@@ -1,6 +1,7 @@
 
 
 import os
+import time
 
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
@@ -28,6 +29,7 @@ def main():
 viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
 
   while True:  
+        time.sleep(1)
     request = youtube.videos().update(
         part="snippet",
         body={
