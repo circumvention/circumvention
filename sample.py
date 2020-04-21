@@ -21,7 +21,7 @@ def main():
     api_version = "v3"
     client_secrets_file = "YOUR_CLIENT.json"
     
-    url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=gnPPgX1p5lc&key=AIzaSyBpJrEkp6QfLqy1ZPeLeCXLN_eIW_Ir7_w'
+    url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=gnPPgX1p5lc&key=AIzaSyAzjLit9yXLKBbgr0eN0Gh0k5fIajfYJa0'
     
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
