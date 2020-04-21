@@ -2,6 +2,7 @@
 
 import os
 import time
+import json
 
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
@@ -17,7 +18,7 @@ def main():
     api_service_name = "youtube"
     api_version = "v3"
     client_secrets_file = "YOUR_CLIENT.json"
-    amount  = 0
+    
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
         client_secrets_file, scopes)
@@ -28,8 +29,8 @@ def main():
     data = urllib.request.urlopen(url).read()
 viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
 
-  while True:  
-        time.sleep(1)
+while True:  
+    time.sleep(1)
     request = youtube.videos().update(
         part="snippet",
         body={
@@ -41,9 +42,8 @@ viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
         }
     )
     response = request.execute()
-    amount += 1
 
-    print('execute succesful' + amount)
+    print('execute succesful')
 
 if __name__ == "__main__":
     main()
