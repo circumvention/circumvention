@@ -27,7 +27,7 @@ def main():
         api_service_name, api_version, credentials=credentials)
     
     data = urllib.request.urlopen(url).read()
-viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
+    viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
 
 while True:  
     time.sleep(1)
