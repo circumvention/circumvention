@@ -9,6 +9,8 @@ import googleapiclient.discovery
 import googleapiclient.errors
 import urllib
 
+running = True
+
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
 def main():
@@ -32,20 +34,19 @@ def main():
     data = urllib.request.urlopen(url).read()
     viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
 
-    
-    request = youtube.videos().update(
-        part="snippet",
-        body={
-          "id": "gnPPgX1p5lc",
-          "snippet": {
-            "title": "if this video has " + str(viewCount) + "you're cool",
-            "categoryId": "23"
+    While True:    
+        time.sleep(0.5)
+        request = youtube.videos().update(
+            part="snippet",
+            body={
+            "id": "gnPPgX1p5lc",
+            "snippet": {
+                "title": "if this video has " + str(viewCount) + " views you're cool",
+                "categoryId": "23"
+            }
           }
-        }
-    )
-    response = request.execute()
-
-    print('execute succesful')
+        )
+        response = request.execute()
 
 if __name__ == "__main__":
     main()
