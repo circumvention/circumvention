@@ -39,8 +39,8 @@ def main():
             sys.stdout.write("Title changing... {:2d} seconds remaining.".format(remaining))
             sys.stdout.flush()
             time.sleep(1)
-        print('Title Changing Done.')
-        request = youtube.videos().update(
+     print('Title Changing Done.')
+     request = youtube.videos().update(
             part="snippet",
             body={
             "id": "gnPPgX1p5lc",
