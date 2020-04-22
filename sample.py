@@ -1,5 +1,3 @@
-
-
 import os
 import time
 import json
@@ -41,7 +39,7 @@ def main():
             sys.stdout.write("{:2d}: Title changing. seconds remaining.".format(remaining))
             sys.stdout.flush()
             time.sleep(1)
-            sys.stdout.write("\rComplete!            \n")
+        sys.stdout.write("\rComplete!            \n")
         print('Title Changed...')
         request = youtube.videos().update(
             part="snippet",
