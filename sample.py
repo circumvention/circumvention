@@ -37,12 +37,11 @@ def main():
     running = True
     while running == True:  
         for remaining in range(180, 0, -1):
-        sys.stdout.write("\r")
-        sys.stdout.write("{:2d}: Title changing. seconds remaining.".format(remaining))
-        sys.stdout.flush()
-        time.sleep(1)
-        sys.stdout.write("\rComplete!            \n")
-        time.sleep(180)
+            sys.stdout.write("\r")
+            sys.stdout.write("{:2d}: Title changing. seconds remaining.".format(remaining))
+            sys.stdout.flush()
+            time.sleep(1)
+            sys.stdout.write("\rComplete!            \n")
         print('Title Changed...')
         request = youtube.videos().update(
             part="snippet",
