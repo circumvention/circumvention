@@ -34,7 +34,12 @@ def main():
     viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
     running = True
     while running == True:  
-        time.sleep(180)
+        import time
+        a = int(180)
+        while a != 0:
+            print(a)
+            time.sleep(1)
+            a = a-1
         print('Title Changed...')
         request = youtube.videos().update(
             part="snippet",
