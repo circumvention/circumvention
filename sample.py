@@ -8,6 +8,8 @@ import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
 import urllib
+import sys
+
 
 
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
@@ -34,12 +36,13 @@ def main():
     viewCount = str(json.loads(data)['items'][0]['statistics']['viewCount'])
     running = True
     while running == True:  
-        import time
-        a = int(180)
-        while a != 0:
-            print(a)
-            time.sleep(1)
-            a = a-1
+        for remaining in range(180, 0, -1):
+        sys.stdout.write("\r")
+        sys.stdout.write("{:2d}: Title changing. seconds remaining.".format(remaining))
+        sys.stdout.flush()
+        time.sleep(1)
+        sys.stdout.write("\rComplete!            \n")
+        time.sleep(180)
         print('Title Changed...')
         request = youtube.videos().update(
             part="snippet",
