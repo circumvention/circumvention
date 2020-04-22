@@ -35,6 +35,7 @@ def main():
     running = True
     while running == True:  
         time.sleep(270)
+        print('Title Changed...')
         request = youtube.videos().update(
             part="snippet",
             body={
@@ -46,7 +47,7 @@ def main():
           }
         )
         response = request.execute()
-        print('exexcuted...')
+        
 
 if __name__ == "__main__":
     main()
