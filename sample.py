@@ -40,7 +40,7 @@ def main():
             sys.stdout.flush()
             time.sleep(1)
         sys.stdout.write("\rComplete!            \n")
-        print('Title Changed...')
+        print('Title Changing Done.')
         request = youtube.videos().update(
             part="snippet",
             body={
