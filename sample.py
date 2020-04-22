@@ -39,7 +39,6 @@ def main():
             sys.stdout.write("Title changing... {:2d} seconds remaining.".format(remaining))
             sys.stdout.flush()
             time.sleep(1)
-        sys.stdout.write("\rComplete!            \n")
         print('Title Changing Done.')
         request = youtube.videos().update(
             part="snippet",
