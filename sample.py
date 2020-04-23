@@ -19,7 +19,7 @@ def main():
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "YOUR_CLIENT.json"
+    client_secrets_file = "client_secret_497488498026-npagls46cartolabbib43c0i1ef65r0j.apps.googleusercontent.com.json"
     
     url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=gNMBTjDT9ew&key=AIzaSyDzexaJCbzger34TtAeWgkVebossSpU_XI'
     
