@@ -17,7 +17,7 @@ def main():
     api_version = "v3"
     client_secrets_file = "client_secret_497488498026-npagls46cartolabbib43c0i1ef65r0j.apps.googleusercontent.com.json"
     
-    url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=gNMBTjDT9ew&key=AIzaSyDzexaJCbzger34TtAeWgkVebossSpU_XI'
+    url = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=TTVhxeFw3Jo&key=AIzaSyDzexaJCbzger34TtAeWgkVebossSpU_XI'
     
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
@@ -39,7 +39,7 @@ def main():
      request = youtube.videos().update(
             part="snippet",
             body={
-            "id": "gNMBTjDT9ew",
+            "id": "TTVhxeFw3Jo",
             "snippet": {
                 "title": "if this video has " + str(viewCount) + " views you're cool",
                 "categoryId": "23"
