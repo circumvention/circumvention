@@ -36,7 +36,7 @@ def main():
             sys.stdout.flush()
             time.sleep(1)
      print('Title Changing Done.')
-        request = youtube.videos().update(
+     request = youtube.videos().update(
                 part="snippet",
                 body={
                 "id": "gnPPgX1p5lc",
